@@ -8,3 +8,9 @@ import time
 
 # import Flask
 from flask import Flask, render_template, request, redirect, url_for, flash, jsonify
+
+# import dummy_data from data.py
+from data import dummy_data
+
+def retrieve_data():
+    return dummy_data
