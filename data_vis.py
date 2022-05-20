@@ -13,7 +13,6 @@ substances = df['substance'].tolist()
 # create a new dataframe with the amounts and the substance name
 df_amounts = pd.DataFrame({'substance': substances, 'amount': amounts,})
 
-
 fig = px.bar(df_amounts, x='substance', y='amount',  
    barmode='group')
 app.layout = html.Div(children=[

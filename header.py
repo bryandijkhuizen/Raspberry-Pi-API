@@ -14,3 +14,7 @@ from data import dummy_data
 
 def retrieve_data():
     return dummy_data
+
+def export_graph(figure, export_name, extension):
+    # write figure to file
+    figure.write_image(f'{export_name}.{extension}')
