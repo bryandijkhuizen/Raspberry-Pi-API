@@ -1,5 +1,7 @@
+# import the header file
 from header import *
 
+# create a new Dash app
 app = dash.Dash(__name__)
 
 # perform an http get request to the server
@@ -13,10 +15,11 @@ substances = df['substance'].tolist()
 # create a new dataframe with the amounts and the substance name
 df_amounts = pd.DataFrame({'substance': substances, 'amount': amounts,})
 
-
-
+# create a new figure
 fig = px.bar(df_amounts, x='substance', y='amount',  
    barmode='group')
+
+# display the figure in an html div
 app.layout = html.Div(children=[
    html.H1(children='Hello Dash'),
    html.Div(children='''
@@ -30,6 +33,7 @@ app.layout = html.Div(children=[
    
 ]) 
 
+# run the app
 if __name__ == '__main__':
    app.run_server(debug=True)
  
