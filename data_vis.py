@@ -1,10 +1,4 @@
-import dash
-from dash import dcc
-from dash import html
-import plotly.express as px
-import pandas as pd
-import schedule
-import time
+from header import *
 
 app = dash.Dash(__name__)
 
@@ -19,6 +13,7 @@ substances = df['substance'].tolist()
 # create a new dataframe with the amounts and the substance name
 df_amounts = pd.DataFrame({'substance': substances, 'amount': amounts,})
 
+
 fig = px.bar(df_amounts, x='substance', y='amount',  
    barmode='group')
 app.layout = html.Div(children=[
@@ -32,6 +27,9 @@ app.layout = html.Div(children=[
    ),
    
 ]) 
+
+
+
 
 if __name__ == '__main__':
    app.run_server(debug=True)

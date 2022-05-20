@@ -1,5 +1,5 @@
-# import Flask
-from flask import Flask, render_template, request, redirect, url_for, flash, jsonify
+# import header.py
+from header import *
 
 # create Flask app
 app = Flask(__name__)
