@@ -45,6 +45,15 @@ dummy_data = [
     'danger_level': 'high',
     'time_stamp': '2019-01-01'
     },
+    {
+    'id': 6,
+    'substance': 'SO2',
+    'amount': '14',
+    'unit': 'kg',
+    'danger_level': 'high',
+    'time_stamp': '2019-01-01'
+    },
+
 ]
 
 def retrieve_data():

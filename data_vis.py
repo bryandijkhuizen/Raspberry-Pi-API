@@ -30,6 +30,7 @@ app.layout = html.Div(children=[
       id='example-graph',
       figure=fig
    ),
+   
 ]) 
 
 if __name__ == '__main__':
