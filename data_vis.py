@@ -23,9 +23,9 @@ fig = px.bar(df_amounts, x='time', y='danger',
 
 # display the figure in an html div
 app.layout = html.Div(children=[
-   html.H1(children='Hello Dash'),
+   html.H1(children='Rookbot Dashboard'),
    html.Div(children='''
-   Dash: A web application framework for Python.
+   Gedane metingen van de luchtkwaliteit in de buurt van de Rookbot.
    '''),
    html.Button('Export Graph', id='export_graph_button', n_clicks=0),
    dcc.Graph(
