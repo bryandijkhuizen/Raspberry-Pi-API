@@ -11,12 +11,14 @@ df = pd.read_json('http://127.0.0.1:5000/data/get')
 # get the amounts and the substance name out of the dataframe
 amounts = df['amount'].tolist()
 substances = df['substance'].tolist()
+danger_levels = df['danger_level'].tolist()
+timestamps = df['time_stamp'].tolist()
 
 # create a new dataframe with the amounts and the substance name
-df_amounts = pd.DataFrame({'substance': substances, 'amount': amounts,})
+df_amounts = pd.DataFrame({'time': timestamps, 'danger': danger_levels,})
 
 # create a new figure
-fig = px.bar(df_amounts, x='substance', y='amount',  
+fig = px.bar(df_amounts, x='time', y='danger',  
    barmode='group')
 
 # display the figure in an html div
@@ -32,6 +34,8 @@ app.layout = html.Div(children=[
    ),
    
 ]) 
+
+export_graph(fig, 'example_graph', 'png')
 
 # run the app
 if __name__ == '__main__':
