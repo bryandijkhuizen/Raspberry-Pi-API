@@ -10,7 +10,7 @@
 
 ### Install requirements
 
-* sudo apt-get install python3-pandas
+* `sudo apt-get install python3-pandas`
 
 * `pip install -r requirements.txt`
 * `pip3 install -r requirements.txt`
